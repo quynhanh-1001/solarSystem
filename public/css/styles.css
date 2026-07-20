@@ -1,0 +1,119 @@
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: lightblue;
+    color: black;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    background-color: black;
+    color: gold;
+
+    margin: 20px 10px 0;
+    padding: 12px;
+}
+
+nav {
+    background-color: whitesmoke;
+    color: navy;
+
+    margin: 20px 10px 0;
+    padding: 8px;
+}
+
+nav a {
+    color: blue;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    background-color: navy;
+    color: white;
+}
+
+h2 {
+    background-color: darkblue;
+    color: gold;
+
+    margin: 20px 10px 0;
+    padding: 10px;
+}
+
+main {
+    background-color: lightgray;
+    color: black;
+
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+img {
+    max-width: 700px;
+    width: 80%;
+}
+
+footer {
+    margin-top: auto;
+    font-size: 10px;
+    background-color:bisque;
+    color:chocolate;
+
+    padding: 15px;
+}
+
+/* footer p {
+    background-color: black;
+    color: white;
+
+    margin: 5px;
+} */
+
+.planet-details {
+    color: black;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.planet-details p {
+    color: black;
+    margin: 0;
+    padding: 12px;
+    border-bottom: 1px solid gray;
+}
+
+.nasa-page {
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.nasa-page h2 {
+    background-color: navy;
+    color: yellow;
+    padding: 10px;
+}
+
+.nasa-page h3 {
+    color: darkblue;
+}
+
+.nasa-image {
+    max-width: 800px;
+    width: 90%;
+}
+
+.nasa-page p {
+    color: black;
+    line-height: 1.5;
+}

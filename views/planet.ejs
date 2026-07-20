@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head.ejs") %>
+
+<body>
+    <!-- <h1>The Solar System</h1> -->
+
+    <!-- <%- include("partials/nav.ejs") %> -->
+    <%- include("partials/header.ejs") %>
+
+    <main class="planet-page">
+        <h2>Planet <%= planetName %></h2>
+
+        <% if (planetInfo.image) { %>
+            <img
+                class="planet-image"
+                src="<%= planetInfo.image %>"
+                alt="Planet <%= planetName %>"
+            >
+        <% } %>
+
+        <section class="planet-details">
+
+            <% Object.entries(planetInfo).forEach(function(entry) { %>
+
+                <% const property = entry[0]; %>
+                <% const value = entry[1]; %>
+
+                <% if (property !== "image") { %>
+
+                    <p>
+                        <strong><%= property %>:</strong>
+
+                        <% if (Array.isArray(value)) { %>
+                            <%= value.join(", ") %>
+
+                        <% } else if (
+                            typeof value === "object" &&
+                            value !== null
+                        ) { %>
+                            <%= JSON.stringify(value) %>
+
+                        <% } else { %>
+                            <%= value %>
+                        <% } %>
+                    </p>
+
+                <% } %>
+
+            <% }); %>
+
+        </section>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

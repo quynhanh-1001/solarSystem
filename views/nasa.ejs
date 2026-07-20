@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head.ejs") %>
+
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <main class="nasa-page">
+        <h2>NASA Picture of the Day</h2>
+
+        <h3><%= nasaInfo.title %></h3>
+
+        <p>
+            <strong>Date:</strong>
+            <%= nasaInfo.date %>
+        </p>
+
+        <% if (nasaInfo.media_type === "image") { %>
+            <img class="nasa-image"
+                src="<%= nasaInfo.url %>"
+                alt="<%= nasaInfo.title %>"
+            >
+        <% } %>
+
+        <h3>Description</h3>
+
+        <p>
+            <%= nasaInfo.explanation %>
+        </p>
+
+        <% if (nasaInfo.copyright) { %>
+            <p>
+                <strong>Image credit:</strong>
+                <%= nasaInfo.copyright %>
+            </p>
+        <% } %>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
